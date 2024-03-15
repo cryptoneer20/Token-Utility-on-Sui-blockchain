@@ -50,6 +50,7 @@ export default function AdminPage(){
                         await createToken(name, symbol, Number(decimals), description, logoUrl, Number(totalSupply) * 10**Number(decimals))
                         openNotification('success', 'CreateToken success')
                     }catch(err: any){
+                        console.log(err)
                         openNotification('error', err.message)
                     }
                 }}>Create Token</button>
